@@ -3,37 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OptiStudio</title>
+    <title>OptiStudio - Descargas</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Bienvenido al nacimiento de la web de OptiStudio</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Inicio</a></li>
-                <li><a href="#about">Acerca de</a></li>
-                <li><a href="#contact">Contacto</a></li>
-            </ul>
-        </nav>
+        <h1>OptiStudio - Descargas</h1>
     </header>
 
-    <main>
-        <section id="home">
-            <h2>Inicio</h2>
-            <p>Bienvenido a PapuLandia</p>
-        </section>
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Menú</h2>
+            <input type="text" placeholder="Buscar..." class="search-box">
+            <ul>
+                <li><a href="#celular">Celular</a></li>
+                <li><a href="#juegos">Juegos</a></li>
+                <li><a href="#programas">Programas</a></li>
+                <li><a href="#sistemas">Sistemas</a></li>
+            </ul>
+        </aside>
 
-        <section id="about">
-            <h2>Acerca de</h2>
-            <p>Todavia no hay nada... Proximamente habra muchos enlaces</p>
-        </section>
+        <main>
+            <section id="celular">
+                <h2>Celular</h2>
+                <p>Aquí van los enlaces de descarga para aplicaciones móviles.</p>
+            </section>
 
-        <section id="contact">
-            <h2>Contacto</h2>
-            <p>Si deseas contactarme, comenta en YT :v</p>
-        </section>
-    </main>
+            <section id="juegos">
+                <h2>Juegos</h2>
+                <div class="game">
+                    <h3>Entrenched</h3>
+                    <button class="download-btn">Descargar (500 MB)</button>
+                </div>
+            </section>
+
+            <section id="programas">
+                <h2>Programas</h2>
+                <p>Aquí van los enlaces de descarga para programas.</p>
+            </section>
+
+            <section id="sistemas">
+                <h2>Sistemas</h2>
+                <p>Aquí van los enlaces de descarga para sistemas operativos.</p>
+            </section>
+        </main>
+    </div>
 
     <footer>
         <p>&copy; 2024 OptiStudio. MIT License</p>
@@ -42,3 +56,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+
