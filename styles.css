@@ -1,56 +1,75 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
-    background: #35424a;
-    color: #ffffff;
-    padding: 20px 0;
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
     text-align: center;
 }
 
-nav ul {
-    list-style: none;
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    margin: 0;
+}
+
+.search-box {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style-type: none;
     padding: 0;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
+.sidebar ul li {
+    margin: 10px 0;
 }
 
-nav a {
-    color: #ffffff;
+.sidebar ul li a {
     text-decoration: none;
+    color: #333;
 }
 
 main {
     padding: 20px;
+    flex: 1;
 }
 
-section {
+.game {
     margin: 20px 0;
-    padding: 20px;
-    background: #ffffff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.download-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.download-btn:hover {
+    background-color: #45a049;
 }
 
 footer {
     text-align: center;
-    padding: 10px 0;
-    background: #35424a;
-    color: #ffffff;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    padding: 10px;
+    background-color: #f0f0f0;
 }
