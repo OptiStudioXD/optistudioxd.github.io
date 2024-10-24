@@ -1,110 +1,52 @@
-/* Reset básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+// Función para el traductor Morse
+function translateToMorse(text) {
+    const morseCode = {
+        'A': '.-', 'B': '-...', 'C': '-.-.', 'D': '-..', 'E': '.', 'F': '..-.',
+        'G': '--.', 'H': '....', 'I': '..', 'J': '.---', 'K': '-.-', 'L': '.-..',
+        'M': '--', 'N': '-.', 'O': '---', 'P': '.--.', 'Q': '--.-', 'R': '.-.',
+        'S': '...', 'T': '-', 'U': '..-', 'V': '...-', 'W': '.--', 'X': '-..-',
+        'Y': '-.--', 'Z': '--..', '1': '.----', '2': '..---', '3': '...--',
+        '4': '....-', '5': '.....', '6': '-....', '7': '--...', '8': '---..',
+        '9': '----.', '0': '-----', ' ': '/'
+    };
+
+    return text.toUpperCase().split('').map(char => morseCode[char] || '').join(' ');
 }
 
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f6f8fa;
-    color: #24292e;
-}
+// Mostrar la sección correspondiente
+document.querySelectorAll('.menu-btn').forEach(button => {
+    button.addEventListener('click', () => {
+        const targetId = button.getAttribute('data-target');
+        
+        // Ocultar todas las secciones
+        document.querySelectorAll('main > section').forEach(section => {
+            section.classList.add('hidden');
+        });
 
-header {
-    background-color: #24292e;
-    color: #ffffff;
-    padding: 1rem;
-    text-align: center;
-}
+        // Mostrar la sección seleccionada
+        const targetSection = document.getElementById(targetId);
+        targetSection.classList.remove('hidden');
 
-.container {
-    display: flex;
-    max-width: 1200px;
-    margin: 20px auto;
-    background-color: #ffffff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
+        // Mostrar el contenido principal
+        document.querySelector('main').classList.add('active');
+    });
+});
 
-.sidebar {
-    width: 250px;
-    background-color: #f1f8ff;
-    padding: 20px;
-    border-right: 1px solid #e1e4e8;
-}
+// Traducir Morse
+document.querySelector('#traductor-morse .translate-btn').addEventListener('click', () => {
+    const input = document.querySelector('#traductor-morse input[type="text"]');
+    const result = translateToMorse(input.value);
+    alert(`Texto en Morse: ${result}`);
+});
 
-.sidebar h2 {
-    margin-bottom: 1rem;
-    font-weight: 700;
-}
+// Traductor de idiomas (simulación)
+document.querySelector('#traductor-idiomas .translate-btn').addEventListener('click', () => {
+    const input = document.querySelector('#traductor-idiomas input[type="text"]');
+    alert(`Funcionalidad de traducción no implementada. Texto ingresado: ${input.value}`);
+});
 
-.search-box {
-    width: 100%;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    border: 1px solid #e1e4e8;
-    border-radius: 4px;
-}
-
-.sidebar ul {
-    list-style: none;
-}
-
-.sidebar li {
-    margin: 0.5rem 0;
-}
-
-.sidebar a {
-    text-decoration: none;
-    color: #0366d6;
-}
-
-.sidebar a:hover {
-    text-decoration: underline;
-}
-
-main {
-    padding: 20px;
-    flex: 1;
-}
-
-section {
-    margin-bottom: 2rem;
-}
-
-section h2 {
-    margin-bottom: 1rem;
-    font-weight: 700;
-}
-
-section p {
-    margin-bottom: 1rem;
-}
-
-input[type="text"] {
-    width: 100%;
-    padding: 0.5rem;
-    border: 1px solid #e1e4e8;
-    border-radius: 4px;
-    margin-bottom: 1rem;
-}
-
-button {
-    background-color: #2cbe4e;
-    color: #ffffff;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #28a745;
-}
-
-footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #f6f8fa;
-    border-top: 1px solid #e1e4e8;
-}
+// Descargar videos (simulación)
+document.querySelector('#descargar-videos .download-btn').addEventListener('click', () => {
+    const input = document.querySelector('#descargar-videos input[type="text"]');
+    alert(`Funcionalidad de descarga no implementada para la URL: ${input.value}`);
+});
