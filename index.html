@@ -9,36 +9,33 @@
 </head>
 <body>
     <header>
-        <h1>OptiStudio - Descargas</h1>
+        <h1>OptiStudio</h1>
+        <nav>
+            <ul>
+                <li><button class="menu-btn" data-target="traductor-morse">Traductor Morse</button></li>
+                <li><button class="menu-btn" data-target="traductor-idiomas">Traductor (todos los idiomas)</button></li>
+                <li><button class="menu-btn" data-target="descargar-videos">Descargar Videos</button></li>
+            </ul>
+        </nav>
     </header>
 
     <div class="container">
-        <aside class="sidebar">
-            <h2>Categorías</h2>
-            <input type="text" placeholder="Buscar..." class="search-box">
-            <ul>
-                <li><a href="#traductor-morse">Traductor Morse</a></li>
-                <li><a href="#traductor-idiomas">Traductor (todos los idiomas)</a></li>
-                <li><a href="#descargar-videos">Descargar Videos</a></li>
-            </ul>
-        </aside>
-
         <main>
-            <section id="traductor-morse">
+            <section id="traductor-morse" class="hidden">
                 <h2>Traductor Morse</h2>
                 <p>Aquí puedes traducir texto a código Morse y viceversa.</p>
                 <input type="text" placeholder="Introduce el texto aquí...">
                 <button class="translate-btn">Traducir</button>
             </section>
 
-            <section id="traductor-idiomas">
+            <section id="traductor-idiomas" class="hidden">
                 <h2>Traductor (todos los idiomas)</h2>
                 <p>Aquí puedes traducir texto entre diferentes idiomas.</p>
                 <input type="text" placeholder="Introduce el texto aquí...">
                 <button class="translate-btn">Traducir</button>
             </section>
 
-            <section id="descargar-videos">
+            <section id="descargar-videos" class="hidden">
                 <h2>Descargar Videos</h2>
                 <p>Aquí puedes descargar videos de diferentes plataformas.</p>
                 <input type="text" placeholder="Introduce la URL del video...">
