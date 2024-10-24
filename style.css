@@ -7,65 +7,56 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f6f8fa;
-    color: #24292e;
+    background-color: #e9ecef;
+    color: #343a40;
 }
 
 header {
-    background-color: #24292e;
+    background-color: #343a40;
     color: #ffffff;
     padding: 1rem;
     text-align: center;
 }
 
-.container {
+nav ul {
+    list-style: none;
     display: flex;
-    max-width: 1200px;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav button {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+nav button:hover {
+    background-color: #0056b3;
+}
+
+.container {
+    max-width: 800px;
     margin: 20px auto;
+    padding: 20px;
     background-color: #ffffff;
+    border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.sidebar {
-    width: 250px;
-    background-color: #f1f8ff;
-    padding: 20px;
-    border-right: 1px solid #e1e4e8;
-}
-
-.sidebar h2 {
-    margin-bottom: 1rem;
-    font-weight: 700;
-}
-
-.search-box {
-    width: 100%;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    border: 1px solid #e1e4e8;
-    border-radius: 4px;
-}
-
-.sidebar ul {
-    list-style: none;
-}
-
-.sidebar li {
-    margin: 0.5rem 0;
-}
-
-.sidebar a {
-    text-decoration: none;
-    color: #0366d6;
-}
-
-.sidebar a:hover {
-    text-decoration: underline;
-}
-
 main {
-    padding: 20px;
-    flex: 1;
+    display: none; /* Oculta el contenido inicialmente */
+}
+
+main.active {
+    display: block; /* Muestra el contenido activo */
 }
 
 section {
@@ -77,34 +68,31 @@ section h2 {
     font-weight: 700;
 }
 
-section p {
-    margin-bottom: 1rem;
-}
-
 input[type="text"] {
     width: 100%;
-    padding: 0.5rem;
-    border: 1px solid #e1e4e8;
-    border-radius: 4px;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
     margin-bottom: 1rem;
 }
 
 button {
-    background-color: #2cbe4e;
+    background-color: #28a745;
     color: #ffffff;
     border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
+    padding: 10px 15px;
+    border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #28a745;
+    background-color: #218838;
 }
 
 footer {
     text-align: center;
     padding: 1rem;
-    background-color: #f6f8fa;
-    border-top: 1px solid #e1e4e8;
+    background-color: #f8f9fa;
+    border-top: 1px solid #dee2e6;
 }
